@@ -1,0 +1,50 @@
+<!--
+當SketchUp遇見Ruby － 邁向程式化建模之路（碁峯出版）
+http://books.gotop.com.tw/v_AEC009100
+ex_910.html - 接收來自Ruby的端點資料，更新資訊
+-->
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript">
+        function setPoint1(c1, c2, c3) {
+            document.getElementById("pt1").innerHTML = c1 + ", " + c2 + ", " + c3
+        }
+        function setPoint2(c1, c2, c3) {
+            document.getElementById("pt2").innerHTML = c1 + ", " + c2 + ", " + c3
+        }
+        function setPoint3(c1, c2, c3) {
+            document.getElementById("pt3").innerHTML = c1 + ", " + c2 + ", " + c3
+        }
+        function setPoint4(c1, c2, c3) {
+            document.getElementById("pt4").innerHTML = c1 + ", " + c2 + ", " + c3
+        }
+
+        function faceDeleted() {
+            document.getElementById("pt1").innerHTML = "圖形已刪除"
+            document.getElementById("pt2").innerHTML = "圖形已刪除"
+            document.getElementById("pt3").innerHTML = "圖形已刪除"
+            document.getElementById("pt4").innerHTML = "圖形已刪除"
+        }
+    </script>
+</head>
+<body>
+<!-- 顯示第一個端點的位置 -->
+第一個點：
+<b id="pt1">在預設位置</b>
+<br/>
+<!-- 顯示第二個端點的位置 -->
+第二個點：
+<b id="pt2">在預設位置</b>
+<br/>
+<!-- 顯示第三個端點的位置 -->
+第三個點：
+<b id="pt3">在預設位置</b>
+<br/>
+<!-- 顯示第四個端點的位置 -->
+第四個點：
+<b id="pt4">在預設位置</b>
+<br/>
+</body>
+</html>

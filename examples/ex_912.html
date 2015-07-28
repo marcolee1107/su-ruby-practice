@@ -1,0 +1,63 @@
+<!--
+當SketchUp遇見Ruby － 邁向程式化建模之路（碁峯出版）
+http://books.gotop.com.tw/v_AEC009100
+ex_912.html - 建立表單接收資料，組成callback參數
+-->
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript">
+        function sendPoints() {
+            var ids = new Array("x1", "y1", "z1", "x2", "y2", "z2", "x3", "y3", "z3", "x4", "y4", "z4");
+            var arg = "";
+            var entry = "";
+            var valid = true;
+
+            // 迭代表單欄位，處理其值，組成callback傳遞參數
+            for (i in ids) {
+                entry = document.getElementById(ids[i]).value
+                if ((entry.length == 0) || isNaN(entry)) {
+                    valid = false;
+                }
+                else {
+                    arg = arg + entry + ",";
+                }
+            }
+            // 傳遞參數到SketchUp程式進行處理
+            if (!valid) {
+                arg = "";
+            }
+            window.location = 'skp:create_face@' + arg;
+        }
+    </script>
+</head>
+<body>
+<!-- 輸入第一個端點位置 -->
+第一個端點：
+<input type="text" id="x1" value="0.0" size="10" maxlength="6"/>
+<input type="text" id="y1" value="0.0" size="10" maxlength="6"/>
+<input type="text" id="z1" value="0.0" size="10" maxlength="6"/>
+<br/><br/>
+<!-- 輸入第二個端點位置 -->
+第二個端點：
+<input type="text" id="x2" value="10.0" size="10" maxlength="6"/>
+<input type="text" id="y2" value="0.0" size="10" maxlength="6"/>
+<input type="text" id="z2" value="0.0" size="10" maxlength="6"/>
+<br/><br/>
+<!-- 輸入第三個端點位置 -->
+第三個端點：
+<input type="text" id="x3" value="10.0" size="10" maxlength="6"/>
+<input type="text" id="y3" value="10.0" size="10" maxlength="6"/>
+<input type="text" id="z3" value="0.0" size="10" maxlength="6"/>
+<br/><br/>
+<!-- 輸入第四個端點位置 -->
+第四個端點：
+<input type="text" id="x4" value="0.0" size="10" maxlength="6"/>
+<input type="text" id="y4" value="10.0" size="10" maxlength="6"/>
+<input type="text" id="z4" value="0.0" size="10" maxlength="6"/>
+<br/><br/>
+<!-- 傳送端點資料到JavaScript函數 -->
+<input type="submit" onclick="sendPoints();" value="繪出圖形"/>
+</body>
+</html>

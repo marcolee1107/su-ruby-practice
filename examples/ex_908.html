@@ -1,0 +1,42 @@
+<!--
+當SketchUp遇見Ruby － 邁向程式化建模之路（碁峯出版）
+http://books.gotop.com.tw/v_AEC009100
+ex_908.html - 利用 JavaScript 自訂函數處理來自表單的資料
+-->
+
+<html>
+<head>
+    <script type="text/javascript"> function scriptFunc() {
+        // 如果第一個選項按鈕被選取
+        if (document.getElementById("r1").checked) {
+            document.write(" 報名第一梯次。");
+        }
+        // 如果第二個選項按鈕被選取
+        else if (document.getElementById("r2").checked) {
+            document.write(" 報名第二梯次。");
+        }
+        // 如果第三個選項按鈕被選取
+        else if (document.getElementById("r3").checked) {
+            document.write(" 報名第三梯次。");
+        }
+        // 如果沒有選擇選項按鈕
+        else
+        {
+            document.write(" 沒有選擇任何場次。");
+        }
+    }
+    </script>
+</head>
+
+<body>
+<!-- 建立選項按鈕 -->
+<input type="radio" id="r1" name="radios" value="radio1"/>
+報名第一梯次<br/>
+<input type="radio" id="r2" name="radios" value="radio2"/>
+報名第二梯次<br/>
+<input type="radio" id="r3" name="radios" value="radio3"/>
+報名第三梯次<br/><br/>
+<!-- 建立按鈕，當使用者按下按鈕時，執行指定的程序。 -->
+<input type="submit" onclick="scriptFunc()" value="呼叫指定功能"/>
+</body>
+</html>
