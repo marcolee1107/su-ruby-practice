@@ -4,6 +4,6 @@
 
 >程式範例全部儲存在 examples 資料夾中。
 
-![GITHUB](http://sketchupruby.tohot.net/wp-content/uploads/2015/07/AEC009100.jpg "本書封面")
+>[碁峯資訊](http://books.gotop.com.tw/v_AEC009100) 網站有進一步的介紹，對本書有任何指正，請直接洽碁峯。
 
 
